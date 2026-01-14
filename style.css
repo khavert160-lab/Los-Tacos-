@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu h1 {
+    margin: 0;
+    color: #22c55e;
+}
+
+.menu a {
+    color: #e5e7eb;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #22c55e;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.85)),
+    url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin: 0;
+    color: #22c55e;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 500px;
+}
+
+section {
+    padding: 120px 60px;
+}
+
+h2 {
+    color: #22c55e;
+}
+
+.card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #22c55e;
+    color: #020617;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+footer {
+    background: #020617;
+    text-align: center;
+    padding: 25px;
+    color: #9ca3af;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding-left: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+}
+/* ANIMACIONES */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover en botones */
+.btn:hover {
+    background: #16a34a;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* Hover en cards */
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
